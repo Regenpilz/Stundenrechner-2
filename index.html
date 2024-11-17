@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stundenrechner</title>
+  <style>
+    /* Allgemeines Styling für den Body */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* Container für das eingebettete Tool */
+    .calckit-container {
+      max-width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+
+    /* Das eingebettete Tool flexibel gestalten */
+    .calckit {
+      width: 100% !important; /* Flexibel auf 100% setzen */
+      max-width: 100% !important; /* Verhindert breitere Darstellung als der Bildschirm */
+      box-sizing: border-box; /* Verhindert, dass Padding die Breite beeinflusst */
+      overflow: hidden; /* Verhindert horizontalen Scrollbalken */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container für das eingebettete Tool -->
+  <div class="calckit-container">
+    <div class="calckit" data-tool="5698c944e7477d9aca4515f0a96b806cf482775c">
+      <div class="calckit-header">Stunden-Rechner 2</div>
+      <div class="calckit-footer">
+        <a class="calckit-tool" href="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c">Stunden-Rechner 2</a> von <a class="calckit-link" href="https://calckit.io/">CalcKit.io</a>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="https://calckit.io/embed/sdk.js"></script>
+
+</body>
+</html>
