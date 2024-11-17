@@ -3,104 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Eine einfache Website mit einem Stunden-Rechner von CalcKit">
-  <meta name="author" content="Dein Name">
-  <title>Stunden-Rechner</title>
+  <title>Stundenrechner</title>
   <style>
-    /* Allgemeines Styling */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
-    }
-
-    /* Header Styling */
-    header {
-      background-color: #007BFF;
-      color: white;
+      background-color: #f4f4f4;
       text-align: center;
-      padding: 20px 0;
+      padding-top: 50px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    /* Hauptbereich Styling */
-    main {
+    /* Container für die gesamte Seite */
+    .container {
+      width: 90%;
+      max-width: 1000px; /* Maximale Breite des Containers */
+      margin: 0 auto; /* Zentriert den Inhalt */
       padding: 20px;
-      text-align: center;
+      box-sizing: border-box;
     }
 
-    /* CalcKit Styling */
-    .calckit {
-      border: 2px solid #007BFF;
-      border-radius: 10px;
-      padding: 10px;
-      background-color: #ffffff;
-      width: 400px;
-      margin: 20px auto;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
     }
 
-    .calckit-header {
-      font-size: 18px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 10px;
-      color: #007BFF;
-    }
-
-    .calckit-footer {
-      font-size: 12px;
-      text-align: center;
-      margin-top: 10px;
+    p {
+      font-size: 1.2em;
       color: #555;
     }
 
-    .calckit-footer a {
-      color: #007BFF;
-      text-decoration: none;
+    /* Container für das eingebettete Tool */
+    .calckit-container {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; /* Zentriert das Tool */
     }
 
-    .calckit-footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 600px) {
-      .calckit {
-        width: 90%;
-      }
-
-      header h1 {
-        font-size: 20px;
-      }
+    iframe {
+      width: 100%;
+      max-width: 1000px; /* Maximale Breite des eingebetteten Tools */
+      height: 500px; /* Feste Höhe für das Tool */
+      border: none;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Willkommen beim Stunden-Rechner!</h1>
-  </header>
 
-  <!-- Hauptbereich -->
-  <main>
-    <p>Nutze den folgenden Stunden-Rechner, um deine Berechnungen einfach und schnell durchzuführen:</p>
-    <div class="calckit" data-tool="5698c944e7477d9aca4515f0a96b806cf482775c" data-width="400">
-      <div class="calckit-header">Stunden-Rechner 2</div>
-      <div class="calckit-footer">
-        <a class="calckit-tool" href="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c" target="_blank">Stunden-Rechner 2</a> by 
-        <a class="calckit-link" href="https://calckit.io/" target="_blank">CalcKit.io</a>
-      </div>
+  <div class="container">
+    <h1>Willkommen beim Stundenrechner</h1>
+    <p>Nutze den folgenden Rechner, um deine Stunden zu berechnen.</p>
+
+    <!-- Container für das eingebettete Tool -->
+    <div class="calckit-container">
+      <!-- Verwendung von iframe für das Tool -->
+      <iframe src="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c"></iframe>
     </div>
-  </main>
+  </div>
 
-  <!-- CalcKit Script -->
-  <script defer src="https://calckit.io/embed/sdk.js"></script>
 </body>
 </html>
