@@ -43,11 +43,12 @@
       justify-content: center; /* Zentriert das Tool */
     }
 
-    iframe {
-      width: 100%;
-      max-width: 1000px; /* Maximale Breite des eingebetteten Tools */
-      height: 500px; /* Feste Höhe für das Tool */
-      border: none;
+    /* Das eingebettete Tool */
+    .calckit {
+      width: 100%;  /* Maximale Breite auf 100% setzen */
+      max-width: 100% !important; /* Verhindert breitere Darstellung als der Bildschirm */
+      height: auto; /* Verhindert Verformung */
+      overflow: hidden; /* Verhindert horizontalen Scrollbalken */
     }
   </style>
 </head>
@@ -59,10 +60,17 @@
 
     <!-- Container für das eingebettete Tool -->
     <div class="calckit-container">
-      <!-- Verwendung von iframe für das Tool -->
-      <iframe src="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c"></iframe>
+      <div class="calckit" data-tool="5698c944e7477d9aca4515f0a96b806cf482775c">
+        <div class="calckit-header">Stunden-Rechner 2</div>
+        <div class="calckit-footer">
+          <a class="calckit-tool" href="https://calckit.io/tool/5698c944e7477d9aca4515f0a96b806cf482775c">Stunden-Rechner 2</a> von <a class="calckit-link" href="https://calckit.io/">CalcKit.io</a>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- JavaScript für das Tool laden -->
+  <script defer src="https://calckit.io/embed/sdk.js"></script>
 
 </body>
 </html>
