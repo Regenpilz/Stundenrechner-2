@@ -5,16 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stundenrechner</title>
   <style>
-    /* Allgemeines Styling für den Body */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
     /* Container für das eingebettete Tool */
     .calckit-container {
+      width: 100%;
       max-width: 100%;
       padding: 10px;
       box-sizing: border-box;
@@ -23,10 +16,11 @@
 
     /* Das eingebettete Tool flexibel gestalten */
     .calckit {
-      width: 100% !important; /* Flexibel auf 100% setzen */
+      width: 100% !important; /* Maximale Breite auf 100% setzen */
       max-width: 100% !important; /* Verhindert breitere Darstellung als der Bildschirm */
       box-sizing: border-box; /* Verhindert, dass Padding die Breite beeinflusst */
       overflow: hidden; /* Verhindert horizontalen Scrollbalken */
+      display: block; /* Verhindert, dass es als inline-block das Layout stört */
     }
   </style>
 </head>
@@ -42,6 +36,7 @@
     </div>
   </div>
 
+  <!-- JavaScript für das Tool laden -->
   <script defer src="https://calckit.io/embed/sdk.js"></script>
 
 </body>
